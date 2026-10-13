@@ -103,31 +103,4 @@ def diagram():
     file.close()
 
     alen, blen=len(a), len(b)
-    aper,bper=alen*100/(alen+blen),blen*100/(alen+blen)
-    print(f'{YELLOW*(int(aper))}{RESET}{aper}%\n{BLUE*(int(bper))}{RESET}{bper}%')
-
-
-
-# Задание 5
-def graph():
-    h = 12
-
-    clear()
-
-    res = "Y\n\u2191\n"
-    for y in range(h,-1,-1):
-        x = 2*y
-        line = f"│{WHITE*x}{BLACK*2}{RESET}{WHITE*(2*h-x)}{RESET}\n"
-        res += line
-    OX = f"0{f'\u203e'*3*2*(h+1)}\u2192X"
-    res += OX
-    
-    print(res)
-
-
-
-#flag()
-#uzor()
-#animation()
-#diagram()
-#graph()
+    aper,bper=alen*100/(0
