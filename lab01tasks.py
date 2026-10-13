@@ -15,7 +15,7 @@ def clear():
 
 # Задание 1 (Флаг)
 def flag():
-    l, h = 1,1
+    l, h = 1, 1
 
     clear()
 
@@ -96,14 +96,14 @@ def diagram():
     a = []
     b = []
     for i in file_seq:
-        if 5<=float(i)<=10:
+        if 5 <= float(i) <= 10:
             a.append(i)
-        if -10<=float(i)<=-5:
+        if -10 <= float(i) <= -5:
             b.append(i)
     file_seq.close()
 
-    alen, blen=len(a), len(b)
-    aper,bper=alen*100/(alen+blen),blen*100/(alen+blen)
+    alen, blen = len(a), len(b)
+    aper, bper = alen*100/(alen+blen), blen*100/(alen+blen)
     print(f'{YELLOW*(int(aper))}{RESET}{aper}%\n{BLUE*(int(bper))}{RESET}{bper}%')
 
 
