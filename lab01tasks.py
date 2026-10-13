@@ -1,11 +1,11 @@
 # Вариант 9
-tab="   "
-reset = f"\x1b[0m"
-white = f"\x1b[47m{tab}"
-black = f"\x1b[40m{tab}"
-yellow = f"\x1b[43m{tab}"
-blue = f"\x1b[44m{tab}"
-delete = "\033[H"
+TAB="   "
+RESET = f"\x1b[0m"
+WHITE = f"\x1b[47m{TAB}"
+BLACK = f"\x1b[40m{TAB}"
+YELLOW = f"\x1b[43m{TAB}"
+BLUE = f"\x1b[44m{TAB}"
+DELETE = "\033[H"
 import time
 import os
 def clear():
@@ -19,8 +19,8 @@ def flag():
 
     clear()
 
-    linewbw = f"{white*5*l}{blue*3*l}{white*10*l}{reset}\n"*4*h
-    lineb = f"{blue*18*l}{reset}\n"*3*h
+    linewbw = f"{WHITE*5*l}{BLUE*3*l}{WHITE*10*l}{RESET}\n"*4*h
+    lineb = f"{BLUE*18*l}{RESET}\n"*3*h
     print(f"{linewbw}{lineb}{linewbw}")
 
 
@@ -34,7 +34,7 @@ def uzor():
     
     def line(R,colored,amt):
         notcolored = (2*R-colored)//2
-        return f"{white*notcolored}{black*colored}{white*notcolored}{reset}"*amt
+        return f"{WHITE*notcolored}{BLACK*colored}{WHITE*notcolored}{RESET}"*amt
     
     for i in range(0,R*2+1):
         x = R - i
@@ -51,39 +51,39 @@ def animation():
 
     for i in range(cycles):
         time.sleep(0.2)
-        print(delete)
-        print(f"{black}{yellow*3}{black*8}{reset}\n"
-        f"{yellow*5}{black*7}{reset}\n"
-        f"{yellow*5}{black*4}{white}{black*2}{reset}\n"
-        f"{yellow*5}{black*7}{reset}\n"
-        f"{black}{yellow*3}{black*8}{reset}"
+        print(DELETE)
+        print(f"{BLACK}{YELLOW*3}{BLACK*8}{RESET}\n"
+        f"{YELLOW*5}{BLACK*7}{RESET}\n"
+        f"{YELLOW*5}{BLACK*4}{WHITE}{BLACK*2}{RESET}\n"
+        f"{YELLOW*5}{BLACK*7}{RESET}\n"
+        f"{BLACK}{YELLOW*3}{BLACK*8}{RESET}"
         )
 
         time.sleep(0.2)
-        print(delete)
-        print(f"{black*5}{yellow*3}{black*4}{reset}\n"
-        f"{black*4}{yellow*3}{black*5}{reset}\n"
-        f"{black*4}{yellow*2}{black*3}{white}{black*2}{reset}\n"
-        f"{black*4}{yellow*3}{black*5}{reset}\n"
-        f"{black*5}{yellow*3}{black*4}{reset}"
+        print(DELETE)
+        print(f"{BLACK*5}{YELLOW*3}{BLACK*4}{RESET}\n"
+        f"{BLACK*4}{YELLOW*3}{BLACK*5}{RESET}\n"
+        f"{BLACK*4}{YELLOW*2}{BLACK*3}{WHITE}{BLACK*2}{RESET}\n"
+        f"{BLACK*4}{YELLOW*3}{BLACK*5}{RESET}\n"
+        f"{BLACK*5}{YELLOW*3}{BLACK*4}{RESET}"
         )
 
         time.sleep(0.2)
-        print(delete)
-        print(f"{black*8}{yellow*3}{black*1}{reset}\n"
-        f"{black*7}{yellow*5}{reset}\n"
-        f"{black*7}{yellow*5}{reset}\n"
-        f"{black*7}{yellow*5}{reset}\n"
-        f"{black*8}{yellow*3}{black*1}{reset}"
+        print(DELETE)
+        print(f"{BLACK*8}{YELLOW*3}{BLACK*1}{RESET}\n"
+        f"{BLACK*7}{YELLOW*5}{RESET}\n"
+        f"{BLACK*7}{YELLOW*5}{RESET}\n"
+        f"{BLACK*7}{YELLOW*5}{RESET}\n"
+        f"{BLACK*8}{YELLOW*3}{BLACK*1}{RESET}"
         )
 
         time.sleep(0.2)
-        print(delete) 
-        print(f"{black*12}{reset}\n"
-        f"{black*11}{yellow*1}{reset}\n"
-        f"{black*11}{yellow*1}{reset}\n"
-        f"{black*11}{yellow*1}{reset}\n"
-        f"{black*12}{reset}"
+        print(DELETE) 
+        print(f"{BLACK*12}{RESET}\n"
+        f"{BLACK*11}{YELLOW*1}{RESET}\n"
+        f"{BLACK*11}{YELLOW*1}{RESET}\n"
+        f"{BLACK*11}{YELLOW*1}{RESET}\n"
+        f"{BLACK*12}{RESET}"
         )
 
 
@@ -104,7 +104,7 @@ def diagram():
 
     alen, blen=len(a), len(b)
     aper,bper=alen*100/(alen+blen),blen*100/(alen+blen)
-    print(f'{yellow*(int(aper))}{reset}{aper}%\n{blue*(int(bper))}{reset}{bper}%')
+    print(f'{YELLOW*(int(aper))}{RESET}{aper}%\n{BLUE*(int(bper))}{RESET}{bper}%')
 
 
 
@@ -117,7 +117,7 @@ def graph():
     res = "Y\n\u2191\n"
     for y in range(h,-1,-1):
         x = 2*y
-        line = f"│{white*x}{black*2}{reset}{white*(2*h-x)}{reset}\n"
+        line = f"│{WHITE*x}{BLACK*2}{RESET}{WHITE*(2*h-x)}{RESET}\n"
         res += line
     OX = f"0{f'\u203e'*3*2*(h+1)}\u2192X"
     res += OX
