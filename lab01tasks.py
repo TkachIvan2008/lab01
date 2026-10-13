@@ -92,15 +92,15 @@ def animation():
 def diagram():
     clear()
 
-    file = open('sequence.txt', 'r')
+    file_seq = open('sequence.txt', 'r')
     a = []
     b = []
-    for i in file:
+    for i in file_seq:
         if 5<=float(i)<=10:
             a.append(i)
         if -10<=float(i)<=-5:
             b.append(i)
-    file.close()
+    file_seq.close()
 
     alen, blen=len(a), len(b)
     aper,bper=alen*100/(alen+blen),blen*100/(alen+blen)
