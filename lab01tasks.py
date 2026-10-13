@@ -4,7 +4,7 @@ import time
 
 # Вариант 9
 TAB = "   "
-RESET = f"\x1b[0m"
+RESET = "\x1b[0m"
 WHITE = f"\x1b[47m{TAB}"
 BLACK = f"\x1b[40m{TAB}"
 YELLOW = f"\x1b[43m{TAB}"
