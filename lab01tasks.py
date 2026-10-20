@@ -4,7 +4,7 @@ import time
 
 # Вариант 9
 TAB = "   "
-RESET = f"\x1b[0m"
+RESET = "\x1b[0m"
 WHITE = f"\x1b[47m{TAB}"
 BLACK = f"\x1b[40m{TAB}"
 YELLOW = f"\x1b[43m{TAB}"
@@ -105,21 +105,21 @@ def animation():
 def diagram():
     clear()
 
-    file_seq = open("sequence.txt", "r")
-    a = []
-    b = []
-    for i in file_seq:
+    file_sequence = open("sequence.txt", "r")
+    group_a = []
+    group_b = []
+    for i in file_sequence:
         if 5 <= float(i) <= 10:
-            a.append(i)
+            group_a.append(i)
         if -10 <= float(i) <= -5:
-            b.append(i)
-    file_seq.close()
+            group_b.append(i)
+    file_sequence.close()
 
-    a_length = len(a)
-    b_length = len(b)
-    aper = a_length * 100 / (a_length + b_length)
-    bper = b_length * 100 / (a_length + b_length)
-    print(f"{YELLOW * (int(aper))}{RESET}{aper}%\n{BLUE * (int(bper))}{RESET}{bper}%")
+    a_length = len(group_a)
+    b_length = len(group_b)
+    a_percentage = a_length * 100 / (a_length + b_length)
+    b_percentage = b_length * 100 / (a_length + b_length)
+    print(f"{YELLOW * (int(a_percentage))}{RESET}{a_percentage}%\n{BLUE * (int(b_percentage))}{RESET}{b_percentage}%")
 
 
 # Задание 5
